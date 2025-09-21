@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peruvian Nights — Interactive Cooking & Cocktails</title>
+  <meta name="description" content="Private Peruvian cooking experience: hands-on dishes, cocktail making, music and good times. Host at home or book a private venue." />
+  <meta property="og:title" content="Peruvian Nights" />
+  <meta property="og:description" content="Interactive Peruvian cooking & cocktail experience for small groups." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="logo">PN</div>
+        <div class="title">
+          <h1>Peruvian Nights</h1>
+          <p>Interactive Cooking & Cocktails</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#menu">Signature Menu</a>
+        <a href="#booking" class="btn">Book</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h2>A private Peruvian cooking party</h2>
+      <p>Hands-on dishes. Cocktail making. Music and good times. Perfect for friends, birthdays, and team nights.</p>
+      <a href="#booking" class="btn btn-primary">Request a date</a>
+    </div>
+    <canvas id="stars"></canvas>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container grid two">
+      <div>
+        <h3>What it is</h3>
+        <p>Peruvian Nights is a small-group, private cooking experience. We come to you with everything needed for an unforgettable evening: fresh ingredients, tools, and a curated soundtrack. You’ll learn to craft iconic Peruvian flavors and make classic pisco cocktails.</p>
+        <ul class="ticks">
+          <li>Groups of 6–12</li>
+          <li>Host-at-home or private venue</li>
+          <li>2 cocktails included (Pisco Sour, Chilcano)</li>
+          <li>Hands-on appetizer + main dish</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>Quick facts</h4>
+        <ul class="facts">
+          <li><b>Duration:</b> 2.5–3 hours</li>
+          <li><b>Service area:</b> DMV (DC, MD, VA)</li>
+          <li><b>Pricing:</b> from $85 per person (min 6)</li>
+          <li><b>Add‑ons:</b> dessert, photography, extra cocktails</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section alt">
+    <div class="container">
+      <h3>The flow</h3>
+      <div class="timeline">
+        <div class="step"><span>1</span><p>Welcome drink & intros</p></div>
+        <div class="step"><span>2</span><p>First cocktail: Pisco Sour</p></div>
+        <div class="step"><span>3</span><p>Hands-on appetizer</p></div>
+        <div class="step"><span>4</span><p>Main dish cook‑along</p></div>
+        <div class="step"><span>5</span><p>Dinner, music & photos</p></div>
+        <div class="step"><span>6</span><p>Second cocktail & toast</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <h3>Signature menu</h3>
+      <div class="cards">
+        <div class="menu-card">
+          <h4>Ceviche clásico</h4>
+          <p>Fresh fish marinated in lime, aji limo, red onion, cilantro. Bright, clean, unforgettable.</p>
+        </div>
+        <div class="menu-card">
+          <h4>Papa a la Huancaína</h4>
+          <p>Silky aji amarillo cheese sauce over potatoes. Bold and addictive.</p>
+        </div>
+        <div class="menu-card">
+          <h4>Lomo Saltado</h4>
+          <p>Stir‑fried beef, onions, tomatoes, soy and vinegar. The icon.</p>
+        </div>
+        <div class="menu-card">
+          <h4>Ají de Gallina</h4>
+          <p>Shredded chicken in a creamy aji amarillo sauce. Comfort with character.</p>
+        </div>
+      </div>
+      <p class="note">We accommodate dietary preferences and allergies. Vegetarian options available.</p>
+    </div>
+  </section>
+
+  <section id="booking" class="section alt">
+    <div class="container grid two">
+      <div>
+        <h3>Book your night</h3>
+        <p>Tell us your preferred date, location, group size, and any dietary notes. We’ll confirm availability and send pricing.</p>
+        <p class="cta">
+          <a class="btn btn-primary" href="mailto:hello@peruviannights.com?subject=Peruvian%20Nights%20booking%20request&body=Name%3A%0ADate%3A%0ALocation%3A%0AGroup%20size%3A%0ADietary%20notes%3A%0APhone%3A%0A">Email booking request</a>
+          <a class="btn" href="https://calendar.google.com" target="_blank" rel="noopener">Check your calendar</a>
+        </p>
+        <p class="tiny">Prefer a form? Replace this section with your embedded provider (e.g., HubSpot, Tally, Formspree). See README.</p>
+      </div>
+      <div class="card">
+        <h4>Contact</h4>
+        <p>Email: <a href="mailto:hello@peruviannights.com">hello@peruviannights.com</a><br/>Instagram: @peruviannights</p>
+        <p class="tiny">DMV area. Travel available on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Peruvian Nights. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- If you use HubSpot, paste the embed code below and add a div with an id to mount it. -->
+  <!-- Example:
+  <div id="hubspot-form"></div>
+  <script type="text/javascript" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      region: "na1",
+      portalId: "XXXXXXX",
+      formId: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX",
+      target: "#hubspot-form"
+    });
+  </script>
+  -->
+  <script src="script.js"></script>
+</body>
+</html>
