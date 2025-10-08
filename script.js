@@ -1,25 +1,18 @@
-// Tiny starfield for the hero section; no frameworks.
-const yearEl = document.getElementById('year');
-if (yearEl) yearEl.textContent = new Date().getFullYear();
+// Year stamp
+document.getElementById('year').textContent = new Date().getFullYear();
 
-const canvas = document.getElementById('stars');
-const ctx = canvas.getContext('2d');
-function resize(){canvas.width = canvas.clientWidth; canvas.height = canvas.clientHeight;}
-window.addEventListener('resize', resize); resize();
-
-const stars = Array.from({length: 120}).map(()=>({
-  x: Math.random()*canvas.width,
-  y: Math.random()*canvas.height,
-  r: Math.random()*1.6+0.3,
-  v: Math.random()*0.3+0.1
-}));
-
+// Sparkle particles over hero
+const c = document.getElementById('sparkles');
+const ctx = c.getContext('2d');
+function size(){c.width = c.clientWidth; c.height = c.clientHeight}
+window.addEventListener('resize', size); size();
+const P = Array.from({length: 90}).map(()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.8+.4,v:(Math.random()*.3+.05)}));
 function draw(){
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  for(const s of stars){
-    ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,Math.PI*2);
-    ctx.fillStyle = 'white'; ctx.globalAlpha = 0.8; ctx.fill();
-    s.y += s.v; if (s.y > canvas.height) s.y = -2;
+  ctx.clearRect(0,0,c.width,c.height);
+  for (const p of P){
+    ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fillStyle='rgba(255,255,255,.9)'; ctx.fill();
+    p.y += p.v; if (p.y > c.height) { p.y = -2; p.x = Math.random()*c.width; }
   }
   requestAnimationFrame(draw);
 }
